@@ -1,0 +1,41 @@
+# Environment
+.env
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+
+# Data (raw data stays local — too large for GitHub)
+data/raw/
+data/processed/
+*.csv
+*.parquet
+*.feather
+
+# Model artifacts
+*.pkl
+*.joblib
+*.pt
+*.pth
+models/saved/
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Logs
+logs/
+*.log
