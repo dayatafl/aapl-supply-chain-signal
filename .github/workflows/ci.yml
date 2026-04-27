@@ -34,7 +34,11 @@ jobs:
 
       - name: Run tests (non-model tests only in CI)
         run: |
-          pytest tests/test_backtest.py -v --tb=short
+          if [ -d "tests/" ] && [ "$(ls tests/test_*.py 2>/dev/null | wc -l)" -gt 0 ]; then
+            pytest tests/ -v --tb=short
+          else
+            echo "No test files found. Skipping tests."
+          fi
 
       - name: Lint with flake8
         run: |
